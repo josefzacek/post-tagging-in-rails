@@ -1,0 +1,26 @@
+doctype html
+html lang="en"
+  head
+
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+    title = content_for?(:title) ? yield(:title) : "Tagging in Rails"
+
+    = stylesheet_link_tag    'application'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  body
+    .top-bar.text-center
+      h3 Tagging in Rails
+
+    = yield
+
+    hr
+
+    footer
+      .row
+        p.text-right = link_to 'josefzacek.com', 'http://www.josefzacek.com'
+
+
