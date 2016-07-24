@@ -9,6 +9,9 @@
 
   p
     strong Content:
-  p = post.content
+
+  p = post_content(action_name, post)
+
+  = post_action_button(action_name, post)
 
   hr
