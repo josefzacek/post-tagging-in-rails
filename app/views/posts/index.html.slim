@@ -5,4 +5,4 @@
   .large-8.columns#posts
     = render partial: @posts
 
-    = will_paginate
+    = will_paginate @collection, renderer: FoundationPagination::Rails
