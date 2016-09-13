@@ -1,18 +1,18 @@
-.large-12.columns
-  strong Author: 
-  = post.author.capitalize
-  br
-  sup.text-muted
-    strong Entered: 
-    = time_ago_in_words(post.created_at)
-    |  ago
 = div_for post do
+  .large-12.columns
+    strong Author: 
+    = post.author.capitalize
+    br
+    sup.text-muted
+      strong Entered: 
+      = time_ago_in_words(post.created_at)
+      |  ago
 
-  p
-    strong Content:
+    p
+      strong Content:
 
-  p = post_content(action_name, post)
+    p = post_content(action_name, post)
 
-  = post_action_button(action_name, post)
+    = post_action_button(action_name, post)
 
-  hr
+    hr
