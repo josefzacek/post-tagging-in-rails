@@ -11,8 +11,8 @@
     p
       strong Content:
 
-    p = post_content(action_name, post)
+    p = post.content
 
-    = post_action_button(action_name, post)
+    = link_to 'Read more', post_path(post), class: 'small button'
 
     hr
