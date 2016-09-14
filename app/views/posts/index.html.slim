@@ -2,7 +2,7 @@
   .large-4.columns
     = render partial: 'posts/new'
 
-  .large-8.columns
-    = render partial: @posts.reverse
+  .large-8.columns#posts
+    = render partial: @posts
 
-    = will_paginate
+    = will_paginate @collection, renderer: FoundationPagination::Rails

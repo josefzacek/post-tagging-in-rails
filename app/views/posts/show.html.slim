@@ -1,2 +1,18 @@
 .row
-  = render partial: @post
+  .large-12.columns
+    strong Author: 
+    = @post.author.capitalize
+    br
+    sup.text-muted
+      strong Entered: 
+      = time_ago_in_words(@post.created_at)
+      |  ago
+
+    p
+      strong Content:
+
+    p = @post.content
+
+    = link_to 'Posts listings', root_path, class: 'small button'
+
+    hr
