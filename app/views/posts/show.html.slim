@@ -13,6 +13,12 @@
 
     p = @post.content
 
+    p
+      strong Tags:
+
+    p
+      small = @post.all_tags
+
     = link_to 'Posts listings', root_path, class: 'small button'
 
     hr

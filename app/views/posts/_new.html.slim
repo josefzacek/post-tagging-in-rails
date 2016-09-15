@@ -8,9 +8,9 @@
       = f.text_area :content, placeholder: 'Post content', rows: 5
 
     .large-10.large-centered.columns
-      //= f.text_field :all_tags, placeholder: 'Tags separated with comma'
+      = f.text_field :all_tags, placeholder: 'Tags separated with comma'
 
-    .large-10.large-centered.columns
+    div
       = f.submit 'Create Post', class: 'button'
 
 

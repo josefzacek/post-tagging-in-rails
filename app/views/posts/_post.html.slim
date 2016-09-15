@@ -13,6 +13,12 @@
 
     p = post.content
 
+    p
+      strong Tags:
+
+    p
+      small = post.all_tags
+
     = link_to 'Read more', post_path(post), class: 'small button'
 
     hr
