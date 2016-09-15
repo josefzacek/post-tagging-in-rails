@@ -7,4 +7,8 @@ class Post < ActiveRecord::Base
       Tag.where(name: name.strip).first_or_create!
     end
   end
+
+  def all_tags
+    self.tags.map(&:name).join(", ")
+  end
 end
