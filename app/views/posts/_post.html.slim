@@ -17,7 +17,7 @@
       strong Tags:
 
     p
-      small = post.all_tags
+      small = raw tag_links(post.all_tags)
 
     = link_to 'Read more', post_path(post), class: 'small button'
 
