@@ -3,4 +3,10 @@ module PostsHelper
     tags.split(', ').map { |tag| link_to tag.strip, tag_path(tag.strip) }
         .join(', ')
   end
+
+  def cloud_tag(tags)
+    tags.each do |tag|
+      yield(tag)
+    end
+  end
 end
