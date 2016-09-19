@@ -1,6 +1,13 @@
 .row
   .large-4.columns
-    = render partial: 'posts/new'
+    .callout.secondary
+      = render partial: 'posts/new'
+
+    .callout.secondary
+      h3 Tag cloud
+      - cloud_tag(Tag.tags) do |tag|
+        small = link_to(tag.name, tag_path(tag.name))
+        | , 
 
   .large-8.columns#posts
     = render partial: @posts
