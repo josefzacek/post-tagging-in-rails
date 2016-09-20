@@ -12,9 +12,9 @@ html lang="en"
     = csrf_meta_tags
 
   body
-    .top-bar.text-center
-      h3 Tagging in Rails
-
+    .top-bar
+      .top-bar-title
+        strong = link_to('Post Tagging in Rails', root_url)
     p
 
     = yield
