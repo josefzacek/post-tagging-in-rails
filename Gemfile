@@ -41,6 +41,8 @@ gem 'will_paginate', '~> 3.1'
 
 gem 'will_paginate-foundation', '~> 6.2'
 
+gem 'puma', '~> 3.6'
+
 group :development do
   gem 'better_errors'
 end
