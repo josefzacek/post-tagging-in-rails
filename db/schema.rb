@@ -14,28 +14,30 @@
 ActiveRecord::Schema.define(version: 20160721214740) do
 
   create_table "posts", force: :cascade do |t|
-    t.string   "author"
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "author",     limit: 255
+    t.text     "content",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "taggings", force: :cascade do |t|
-    t.integer  "post_id"
-    t.integer  "tag_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "post_id",    limit: 4
+    t.integer  "tag_id",     limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
-  add_index "taggings", ["post_id"], name: "index_taggings_on_post_id"
-  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
+  add_index "taggings", ["post_id"], name: "index_taggings_on_post_id", using: :btree
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
-  add_index "tags", ["name"], name: "index_tags_on_name"
+  add_index "tags", ["name"], name: "index_tags_on_name", using: :btree
 
+  add_foreign_key "taggings", "posts"
+  add_foreign_key "taggings", "tags"
 end
