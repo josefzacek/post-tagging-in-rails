@@ -3,7 +3,8 @@ class PostsController < ApplicationController
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 3).order("created_at DESC")
     else
-      @posts = Post.paginate(page: params[:page], per_page: 3).order("created_at DESC")
+      @posts = Post.paginate(page: params[:page], per_page: 3)
+                   .order('created_at DESC')
     end
   end
 
