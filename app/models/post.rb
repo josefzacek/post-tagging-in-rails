@@ -15,4 +15,8 @@ class Post < ActiveRecord::Base
   def self.tagged_with(name)
     Tag.find_by_name!(name).posts
   end
+
+  def self.search(search_query)
+    where(['content LIKE ?', "%#{search_query}%"])
+  end
 end
