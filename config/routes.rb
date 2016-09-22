@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'posts#index'
 
-  resources :posts, only: [:create, :show]
+  resources :posts, only: [:index, :create, :show]
 
   get 'tags/:tag', to: 'posts#index', as: 'tag'
 
