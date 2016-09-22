@@ -1,0 +1,9 @@
+.row.text-center
+  p Search post content:
+  = form_tag posts_path, method: :get do
+
+    .large-10.large-centered.columns
+      = text_field_tag :search_query, params[:search_query]
+
+    div
+      = submit_tag 'Search', :name => nil, class: 'button success'
