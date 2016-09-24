@@ -4,6 +4,9 @@
       = render partial: 'posts/new'
 
     .callout.secondary
+      = render partial: 'posts/search_form'
+
+    .callout.secondary
       h3 Tag cloud
       - cloud_tag(Tag.tags) do |tag|
         small = link_to(tag.name, tag_path(tag.name))
