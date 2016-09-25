@@ -1,9 +1,16 @@
 class PostsController < ApplicationController
   def index
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 3).order("created_at DESC")
+      @posts = Post.tagged_with(params[:tag])
+                   .paginate(page: params[:page], per_page: 3)
+                   .order('created_at DESC')
+    elsif params[:search_query]
+      @posts = Post.search(params[:search_query])
+                   .paginate(page: params[:page], per_page: 3)
+                   .order('created_at DESC')
     else
-      @posts = Post.paginate(page: params[:page], per_page: 3).order("created_at DESC")
+      @posts = Post.paginate(page: params[:page], per_page: 3)
+                   .order('created_at DESC')
     end
   end
 
