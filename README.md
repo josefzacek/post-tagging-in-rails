@@ -1,6 +1,8 @@
 ## Post tagging in Ruby on Rails
 
-[https://www.sitepoint.com/tagging-scratch-rails/](https://www.sitepoint.com/tagging-scratch-rails/)
+Created by loosely following [https://www.sitepoint.com/tagging-scratch-rails/](https://www.sitepoint.com/tagging-scratch-rails/) tutorial
+
+Online version available at [https://post-tagging.herokuapp.com/](https://post-tagging.herokuapp.com/)
 
 ### Ruby version
 
