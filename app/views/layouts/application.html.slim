@@ -17,6 +17,8 @@ html lang="en"
         strong = link_to('Post Tagging in Rails', root_url)
     p
 
+    = render partial: "layouts/flash_messages"
+
     = yield
 
     hr
