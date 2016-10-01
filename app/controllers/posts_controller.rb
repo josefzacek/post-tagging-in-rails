@@ -26,7 +26,7 @@ class PostsController < ApplicationController
       if @post.save
         format.js
       else
-        format.html { render root_path }
+        format.js { render js: 'alert("Please fill out all fields!");' }
       end
     end
   end
