@@ -1,0 +1,5 @@
+- flash.each do |key, value|
+  .callout class="#{key}" data-closable=''
+    .text-center = value
+    button.close-button(aria-label="Dismiss alert" type="button" data-close)
+      span(aria-hidden="true") &times;
