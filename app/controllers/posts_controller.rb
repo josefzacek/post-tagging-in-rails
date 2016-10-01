@@ -12,6 +12,8 @@ class PostsController < ApplicationController
       @posts = Post.paginate(page: params[:page], per_page: 3)
                    .order('created_at DESC')
     end
+
+    @post = Post.new
   end
 
   def show
