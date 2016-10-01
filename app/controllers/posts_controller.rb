@@ -12,6 +12,8 @@ class PostsController < ApplicationController
       @posts = Post.paginate(page: params[:page], per_page: 3)
                    .order('created_at DESC')
     end
+
+    @post = Post.new
   end
 
   def show
@@ -24,7 +26,7 @@ class PostsController < ApplicationController
       if @post.save
         format.js
       else
-        format.html { render root_path }
+        format.js { render js: 'alert("Please fill out all fields!");' }
       end
     end
   end
