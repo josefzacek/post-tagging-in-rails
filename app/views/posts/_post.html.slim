@@ -11,7 +11,7 @@
     p
       strong Content:
 
-    p = post.content
+    p = truncate(post.content, length: 200, separator: ' ')
 
     p
       strong Tags:
