@@ -14,9 +14,7 @@
     p = truncate(post.content, length: 200, separator: ' ')
 
     p
-      strong Tags:
-
-    p
+      strong Tags: 
       small = raw tag_links(post.all_tags)
 
     = link_to 'Read more', post_path(post), class: 'small button'
