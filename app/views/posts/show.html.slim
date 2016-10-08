@@ -15,7 +15,7 @@
 
     p
       strong Tags: 
-      small = @post.all_tags
+      small = raw tag_links(@post.all_tags)
 
     = link_to 'Posts listings', root_path, class: 'small button'
 
