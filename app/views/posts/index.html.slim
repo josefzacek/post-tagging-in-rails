@@ -13,10 +13,16 @@
         | , 
 
   .large-8.columns#posts
-    = render partial: @posts
     - if @posts.empty?
       .callout.warning
         h5.text-center Sorry no results found
         p.text-center There are no post/s containing content you searched for.
+    else
+      .callout.primary
+        p 
+          strong = @posts.count  
+          |   posts found
+
+      = render partial: @posts
 
     = will_paginate @collection, renderer: FoundationPagination::Rails
