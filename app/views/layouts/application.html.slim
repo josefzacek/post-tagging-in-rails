@@ -16,6 +16,10 @@ html lang="en"
     .top-bar
       .top-bar-title
         strong = link_to('Post Tagging in Rails', root_url)
+      .top-bar-right
+        ul.menu
+          li = link_to "Home", root_url
+          li = link_to "About", page_path('about')
     p
 
     = render partial: "layouts/flash_messages"
