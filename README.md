@@ -32,4 +32,6 @@ gem 'will_paginate', '~> 3.1'
 
 gem 'will_paginate-foundation', '~> 6.2'
 
+gem 'high_voltage', '~> 3.0.0'
+
 ```
