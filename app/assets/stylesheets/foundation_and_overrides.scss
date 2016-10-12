@@ -58,3 +58,7 @@
 .pagination-previous a::before, .pagination-previous.disabled::before {
   content: none;
 }
+
+code {
+  display: block;
+}
