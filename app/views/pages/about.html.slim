@@ -1,1 +1,40 @@
-p about page
+.row
+  .large-12.columns
+    h1 Post tagging in Ruby on Rails
+
+    p 
+      ' Created by loosely following 
+      = link_to 'https://www.sitepoint.com/tagging-scratch-rails/', 'https://www.sitepoint.com/tagging-scratch-rails/', target: '_blank'
+      tutorial'
+
+    p
+      ' Online version available at 
+      = link_to 'https://post-tagging.herokuapp.com/', 'https://post-tagging.herokuapp.com/', target: '_blank'
+      '  
+
+
+    p
+      b Ruby version
+
+    pre
+      code
+        | ruby -v
+          # ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]
+
+    p
+      b Rails version
+
+    pre
+      code
+        | rails -v
+          # Rails 4.2.6
+
+    h2 Gems used
+
+    pre
+      code
+        | gem 'slim', '~> 3.0', '>= 3.0.7'
+          gem 'foundation-rails', '~> 6.2', '>= 6.2.3.0'
+          gem 'will_paginate', '~> 3.1'
+          gem 'will_paginate-foundation', '~> 6.2'
+          gem 'high_voltage', '~> 3.0.0'
