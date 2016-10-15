@@ -1,4 +1,27 @@
 class Post < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :slug_candidates, use: :slugged
+  after_create :remake_slug
+
+  # Try building a slug based on the following fields in
+  # increasing order of specificity.
+  def slug_candidates
+    [
+      :title,
+      [:title, :id]
+    ]
+  end
+
+  def remake_slug
+    self.update_attribute(:slug, nil)
+    self.save!
+  end
+
+  #You don't necessarily need this bit, but I have it in there anyways
+  def should_generate_new_friendly_id?
+    new_record? || self.slug.nil?
+  end
+
   has_many :taggings
   has_many :tags, through: :taggings
   
