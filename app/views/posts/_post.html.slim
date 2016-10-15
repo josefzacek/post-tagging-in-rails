@@ -9,6 +9,10 @@
       |  ago
 
     p
+      strong Title: 
+      = truncate(post.title, length: 50, separator: ' ')
+
+    p
       strong Content:
 
     p = truncate(post.content, length: 200, separator: ' ')

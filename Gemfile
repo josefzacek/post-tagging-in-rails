@@ -28,6 +28,8 @@ gem 'rails_12factor', group: :production
 
 gem 'high_voltage', '~> 3.0.0'
 
+gem 'friendly_id', '~> 5.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

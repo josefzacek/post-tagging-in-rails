@@ -23,6 +23,6 @@
           strong = @posts.count  
           |   posts found
 
-      = render partial: @posts
+    = render partial: @posts
 
     = will_paginate @collection, renderer: FoundationPagination::Rails
